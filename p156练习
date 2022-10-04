@@ -1,0 +1,82 @@
+2、
+# include <stdio.h>
+# include <math.h>
+ main01(){int i;
+ 	char a[3][20];
+ 	for(i=0;i<3;i++)
+ 	gets(a[i]);
+ 	for(i=0;i<3;i++)
+ 	puts(a[i]);
+ }
+ 3、
+ # include <stdio.h>
+# include <math.h>
+ main01(){int i,k1=0,k2=0;
+ 	char a[80];
+ 	printf("输入");
+ 	scanf("%s",a);
+ 	for(i=0;a[i]!='\0';i++)
+ 	if('a'<=a[i]&&a[i]<='z'||'A'<=a[i]&&a[i]<='Z')k1++;
+ 	else
+ 	k2++;
+ 	printf("%d,%d",k1,k2);
+ 	
+ }
+ 深入训练
+ 1、#include <stdio.h>
+#include <math.h>
+#include <string.h>
+ main01(){
+   char a[5][99],tt[99];
+   int i,j;
+   printf("输入\n");
+   for(i=0;i<5;i++)
+   gets(a[i]);
+   for(i=0;i<4;i++)
+   for(j=0;j<5;j++)
+   {if(strcmp(a[i],a[j])>0)
+   {strcpy(tt,a[i]);strcpy(a[i],a[j]);strcpy(a[j],tt);}
+   }
+   printf("输出姓名");
+   for(i=0;i<5;i++)
+   puts(a[i]);
+    }
+    2、
+    #include <stdio.h>
+#include <math.h>
+#include <string.h>
+ main01(){int i;
+   char a[6][99];
+   for(i=6;i>0;i--)
+   gets(a[i]);
+   printf("花名册");
+   for(i=6;i>0;i--)
+   puts(a[i]);
+    }
+    3、#include <stdio.h>
+#include <math.h>
+#include <string.h>
+ main01(){char a[99],c;
+ int b[10]={0},i;
+ gets(a);
+ for(i=0;a[i]!='\0';i++)
+ 
+     switch(a[i]){
+     	
+     
+     case '1':b[1]+=1;break;
+	 case '2':b[2]+=1;break;
+	 case '3':b[3]+=1;break;
+	 case '4':b[4]+=1;break;
+	 case '5':b[5]+=1;break;
+	 case '6':b[6]+=1;break;
+     case '7':b[7]+=1;break;
+	 case '8':b[8]+=1;break;
+	 case '9':b[9]+=1;break;
+	 case '0':b[0]+=1;break;
+     }
+     for(i=0;i<10;i++)
+     printf("%d出现的次数为%d\n ",i,b[i]);
+    }
+   
+    
