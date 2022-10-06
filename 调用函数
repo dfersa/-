@@ -1,0 +1,62 @@
+4号 12:19:47
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+ main01(){int n1,n2;
+   int jia(int n2);
+   int jian(int n2);
+   int cheng(int n2);
+ 	printf("加法请输入1\n减法请输入2\n乘法请输入3\n");
+ 	scanf("%d",&n1);
+ 	printf("请输入想做的习题数\n");
+ 	scanf("%d",&n2);
+ 	if(n1==1)jia(n2);
+ 	if(n1==2)jian(n2);
+ 	if(n1==3)cheng(n2);
+ }
+
+4号 12:19:57
+int jia(int n)
+	{int x,y,z,i;
+	int fs=0,f;
+	f=100/n;
+	srand((unsigned)time(0));
+	for(i=0;i<n;i++){
+	x=rand()%10;
+	y=rand()%10;
+	printf("%d+%d=",x,y);
+	scanf("%d",&z);
+	if(x+y==z){printf("正确\n");fs=fs+f;}
+	else printf("错误\n");} 
+	printf("总分=%d",fs); 
+}
+int jian(int n)
+	{int x,y,z,i;
+	int fs=0,f;
+	f=100/n;
+	srand((unsigned)time(0));
+	for(i=0;i<n;i++){
+	x=rand()%10;
+	y=rand()%10;
+	printf("%d-%d=",x,y);
+	scanf("%d",&z);
+	if(x-y==z){printf("正确\n");fs=fs+f;}
+	else printf("错误\n");} 
+	printf("总分=%d",fs); 
+}
+int cheng(int n)
+	{int x,y,z,i;
+	int fs=0,f;
+	f=100/n;
+	srand((unsigned)time(0));
+	for(i=0;i<n;i++){
+	x=rand()%10;
+	y=rand()%10;
+	printf("%d*%d=",x,y);
+	scanf("%d",&z);
+	if(x*y==z){printf("正确\n");fs=fs+f;}
+	else printf("错误\n");} 
+	printf("总分=%d",fs); 
+}
+
